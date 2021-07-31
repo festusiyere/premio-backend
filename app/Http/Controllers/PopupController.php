@@ -10,8 +10,6 @@ class PopupController extends Controller
 
     public function index()
     {
-            return response()->view('pop-up')
-                    ->header('Content-Type', 'application/javascript');
 
     }
 
@@ -27,7 +25,14 @@ class PopupController extends Controller
 
     public function show(Popup $popup)
     {
-        //
+        $data = [
+            'top' => '40px',
+            'bottom' => '50px',
+             'content' => 'this is a test question'
+             ];
+        return response()->view('pop-up' , )
+        ->header('Content-Type', 'application/javascript');
+
     }
 
     public function edit(Popup $popup)
