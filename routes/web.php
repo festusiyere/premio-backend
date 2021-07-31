@@ -18,4 +18,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/pop-up/{id}' ,[PopupController::class , 'index'] );
+Route::get('/pop-up/{id}' ,[PopupController::class , 'show'] );
