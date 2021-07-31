@@ -7,4 +7,4 @@ document.body.appendChild(elem);
 elem.addEventListener('click', function () {
     alert('pop')
 })
-console.log({!! $pop['top'] !!})
+console.log("{{$pop['top']}}")
