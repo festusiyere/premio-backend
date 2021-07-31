@@ -10,6 +10,8 @@ class PopupController extends Controller
 
     public function index()
     {
+            return response()->view('pop-up')
+                    ->header('Content-Type', 'application/javascript');
 
     }
 
