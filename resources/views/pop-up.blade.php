@@ -18,22 +18,6 @@ var background_color = "{{$popup['background-color']}}"
 
 
 
-// Get HTML head element
-var head = document.getElementsByTagName('HEAD')[0]; 
-
-// Create new link Element
-var link = document.createElement('link');
-
-// set the attributes for link element 
-link.rel = 'stylesheet'; 
-
-link.type = 'text/css';
-
-link.href = '/asset/style.css'; 
-
-// Append link element to HTML head
-
-head.appendChild(link); 
 
 
 
@@ -41,10 +25,20 @@ head.appendChild(link);
 
 
 
+//add element to dom
 var elem = document.createElement('div');
 elem.classList.add('pop-up-botton');
 document.body.appendChild(elem);
 elem.addEventListener('click', function () {
     alert('pop')
 })
-console.log("")
+console.log("main_text_top")
+
+
+//add style sheet
+var head = document.getElementsByTagName('HEAD')[0]; 
+var link = document.createElement('link');
+link.rel = 'stylesheet'; 
+link.type = 'text/css';
+link.href = '/asset/style.css'; 
+head.appendChild(link); 
