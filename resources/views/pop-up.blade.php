@@ -18,7 +18,7 @@ var background_color = "{{ $popup['background-color'] }}"
 
 
 
-popBtn = `position:fixed;
+var popBtn = `position:fixed;
           right:10px;
           bottom:20px;
           width:80px;
@@ -33,7 +33,7 @@ popBtn = `position:fixed;
           text-align:center;
           border-radius:10px`;
 
-popModual = ` 
+var popModual = ` 
             transition:all 0.3s ease-in-out;
              position : fixed;
              right:10px;
@@ -43,7 +43,7 @@ popModual = `
              background:lightgreen;
              height:0;
              `
-popModualHeader = `
+var popModualHeader = `
                 height:40px;
                 width:100%;
                 border-bottm:1px solid white;
@@ -52,13 +52,13 @@ popModualHeader = `
                 justify-content:flex-start;
                 font-weight:900;
                 `
-popModualHeaderCloseBtn = `
+var popModualHeaderCloseBtn = `
                 width:20px; 
                 height:20px;
                 background:red;
                 `
 
-popModalBody = `
+var popModualBody = `
                 height:360px;
                 width:100%;
                 border-bottm:1px solid white;
@@ -84,10 +84,11 @@ popModalBody.setAttribute('style' , popModualBody)
 
 popBtnElement.innerHTML = 'Click me'
 
-popModalHeader.appendChild(popModalHeaderCloseBtn)
 
+popModalHeader.appendChild(popModalHeaderCloseBtn)
 popModalElement.appendChild(popModalHeader)
 popModalElement.appendChild(popModalBody)
+
 
 document.body.appendChild(popBtnElement);
 document.body.appendChild(popModalElement);
