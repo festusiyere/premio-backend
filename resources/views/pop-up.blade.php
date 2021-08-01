@@ -104,4 +104,4 @@ popModalHeaderCloseBtn.addEventListener('click', function () {
 popBtnElement.addEventListener('click', function () {
     popModalElement.style.height = '400px'
 })
-console.log('yesss');
+console.log('yesss', background_color);
