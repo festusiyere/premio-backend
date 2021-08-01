@@ -1,5 +1,6 @@
 <script>
-    var main_text_top = "{{ $popup->main_text->top }}"
+    @if(!isset($popup))
+var main_text_top = "{{ $popup->main_text->top }}"
 
 var main_text_left = "{{ $popup['mainText']['left'] }}"
 var main_text_content = "{{ $popup['mainText']['content'] }}"
@@ -105,3 +106,6 @@ popBtnElement.addEventListener('click', function () {
     popModalElement.style.height = '400px'
 })
 console.log('yesss', background_color);
+@else
+console.log('An Error Occured')
+@endif
