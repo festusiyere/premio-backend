@@ -1,4 +1,4 @@
-    @if(!isset($popup))
+@if(!isset($popup))
 var main_text_top = "{{ $popup->main_text->top }}"
 
 var main_text_left = "{{ $popup['mainText']['left'] }}"

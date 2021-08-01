@@ -21,7 +21,6 @@ class PopupController extends Controller
     public function store(Request $request)
     {
         $request_data = $request->all();
-return $request_data;
 
         $stars = new Stars();
         $stars->top = $request_data['stars']['top'];
