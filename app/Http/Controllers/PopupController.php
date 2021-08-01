@@ -68,13 +68,6 @@ class PopupController extends Controller
     public function show(Popup $popup)
     {
         $popup = Popup::find($popup);
-        // $popUpData['mainText'] =  $popData->main_text;
-        // $popUpData['email'] = $popData->email;
-        // $popUpData['button'] = $popData->button;
-        // $popUpData['supportingText'] = $popData->supporting_text;
-        // $popUpData['stars'] = $popData->stars;
-        // $popup['background-color'] =  $popData->background_color;
-
         return response()->view('pop-up', compact('popup'))
             ->header('Content-Type', 'application/javascript');
     }
