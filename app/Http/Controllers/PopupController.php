@@ -123,11 +123,11 @@ class PopupController extends Controller
     {
         $popup = $id;
         Popup::destroy($popup->id);
-        Stars::destroy($popup->stars);
-        MainText::destroy($popup->main_text);
-        Email::destroy($popup->email);
-        Button::destroy($popup->button);
-        SupportingText::destroy($popup->supporting_text);
+        Stars::destroy($popup->stars_id);
+        MainText::destroy($popup->main_text_id);
+        Email::destroy($popup->email_id);
+        Button::destroy($popup->button_id);
+        SupportingText::destroy($popup->supporting_text_id);
         return true;
     }
 }

@@ -8,7 +8,7 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;600&display=swap" rel="stylesheet">
-  
+
         <!-- Styles -->
         <style>
             html, body {
@@ -97,5 +97,6 @@
             </div>
         </div>
     </body>
-    <script src="https://premio-backend.herokuapp.com/pop-up/948349"></script>
-</html>
+    {{-- <script src="https://premio-backend.herokuapp.com/pop-up/1"></script> --}}
+    <script src="http://127.0.0.1:8000/pop-up/1" defer></script>
+    </html>
