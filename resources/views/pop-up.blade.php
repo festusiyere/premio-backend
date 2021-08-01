@@ -20,16 +20,18 @@ var background_color = "{{$popup['background-color']}}"
 
 
 
-
+var propBtn = {position:absolute;right:10px;bottom:20px;width:100px;height:50px;z-index:100;background:green}
 
 
 
 
 //add element to dom
 var elem = document.createElement('div');
-elem.classList.add('pop-up-botton');
-elem.style.cssText = 'position:absolute;right:10px;bottom:20px;width:100px;height:50px;z-index:100;background:green';
+
+elem.setAttribute('style',propBtn);
+
 document.body.appendChild(elem);
+
 elem.addEventListener('click', function () {
     alert('pop')
 })
