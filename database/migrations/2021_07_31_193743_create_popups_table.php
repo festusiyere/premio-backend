@@ -21,6 +21,7 @@ class CreatePopupsTable extends Migration
             $table->integer('button');
             $table->integer('supporting_text');
             $table->string('popup')->default('#ff7c54');
+            $table->string('name')->default('festus');
             $table->timestamps();
         });
     }
