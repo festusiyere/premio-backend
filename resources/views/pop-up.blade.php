@@ -16,4 +16,20 @@ var supporting_text_content = "{{$popUpData['supportingText']['content']}}"
 
 var background_color = "{{$popup['background-color']}}"
 
+
+
+popBtn = 'position:absolute;right:10px;bottom:20px;width:100px;height:50px;z-index:100;background:green';
+
+var elem = document.createElement('div');
+
+            elem.classList.add('pop-up-botton');
+
+            elem.setAttribute('style' , popBtn)
+
+            document.body.appendChild(elem);
+
+            elem.addEventListener('click', function () {
+
+             alert('pop')
+})
 console.log('yesss');
