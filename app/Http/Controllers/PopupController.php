@@ -25,12 +25,32 @@ class PopupController extends Controller
 
     public function show(Popup $popup)
     {
-        $pop = [
+        $popUpData['mainText'] = [
             'top' => '40px',
-            'bottom' => '50px',
+            'left' => '50px',
             'content' => 'this is a test question'
              ];
-        return response()->view('pop-up' , compact('pop'))
+
+        $popUpData['email'] = [
+            'top' => '40px',
+            'left' => '50px',
+            'content' => 'this is a test question'
+            ];
+
+        $popUpData['button'] = [
+                'top' => '40px',
+                'left' => '50px',
+                'content' => 'this is a test question'
+            ];
+
+        $popUpData['supportingText'] = [
+                'top' => '40px',
+                'left' => '50px',
+                'content' => 'this is a test question'
+                    ];
+        
+        $popup['background-color'] = 'red';
+        return response()->view('pop-up' , compact('popUpData' ,'popup'))
         ->header('Content-Type', 'application/javascript');
 
     }
