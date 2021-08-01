@@ -1,4 +1,3 @@
-<script>
     @if(!isset($popup))
 var main_text_top = "{{ $popup->main_text->top }}"
 
