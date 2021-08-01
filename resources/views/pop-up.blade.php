@@ -18,18 +18,26 @@ var background_color = "{{$popup['background-color']}}"
 
 
 
-popBtn = 'position:absolute;right:10px;bottom:20px;width:100px;height:50px;z-index:100;background:green';
+popBtn = 'position:fixed;right:10px;bottom:20px;width:80px;height:38px;z-index:100;background:green;cursor:pointer;border-radius:10px';
+popModual = 'position : fixed; width:400px;height:0 right:10px;bottom 70px; backgound-color:lightgreen'
 
-var elem = document.createElement('div');
+var popBtnElement = document.createElement('div');
+var popModalElement =  document.createElement('div');
 
-            elem.classList.add('pop-up-botton');
+popBtnElement.classList.add('pop-up-botton');
+popModalElement.classList.add('pop-up-modal');
 
-            elem.setAttribute('style' , popBtn)
+popBtnElement.setAttribute('style' , popBtn)
+popModalElement.setAttribute('style' , popModual)
 
-            document.body.appendChild(elem);
 
-            elem.addEventListener('click', function () {
+popBtnElement.innerHTML  = 'Click me'
 
-             alert('pop')
+
+document.body.appendChild(popBtnElement);
+document.body.appendChild(popModalElement);
+
+popBtnElement.addEventListener('click', function () {
+    popModalElement.style.height = '600px'
 })
 console.log('yesss');
