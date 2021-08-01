@@ -30,17 +30,19 @@ popBtn = `position:fixed;
           display:flex;
           align-items:Center;
           justify-content:center;
-          text-align:center
+          text-align:center;
           border-radius:10px`;
 
-popModual = `transition:all 0.3s ease-in-out;
+popModual = ` 
+            transition:all 0.3s ease-in-out;
              position : fixed;
              right:10px;
              bottom:20px;
              z-index:10; 
              width:300px;
-             height:0
-             background:lightgreen`
+             background:lightgreen;
+             height:0;
+             `
 
 
 var popBtnElement = document.createElement('div');
