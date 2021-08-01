@@ -65,7 +65,7 @@ class PopupController extends Controller
         return response()->json(['popup_id' => $popup->id]);
     }
 
-    public function show(Popup $popup)
+    public function show($popup)
     {
         $popup = Popup::find($popup);
         return response()->view('pop-up', compact('popup'))
