@@ -43,20 +43,51 @@ popModual = `
              background:lightgreen;
              height:0;
              `
+popModualHeader = `
+                height:40px;
+                width:100%;
+                border-bottm:1px solid white;
+                display:flex;
+                align-item:center;
+                justify-content:flex-start;
+                font-weight:900;
+                `
+popModualHeaderCloseBtn = `
+                width:20px; 
+                height:20px;
+                background:red;
+                `
 
-
+popModalBody = `
+                height:360px;
+                width:100%;
+                border-bottm:1px solid white;
+                `
 var popBtnElement = document.createElement('div');
 var popModalElement = document.createElement('div');
+var popModalHeader = document.createElement('div');
+var popModalHeaderCloseBtn = document.createElement('div');
+
+var popModalBody = document.createElement('div');
 
 popBtnElement.classList.add('pop-up-botton');
 popModalElement.classList.add('pop-up-modal');
+popModalHeader.classList.add('pop-up-modal-header');
+popModalBody.classList.add('pop-up-modal-header');
+
 
 popBtnElement.setAttribute('style' , popBtn)
 popModalElement.setAttribute('style' , popModual)
-
+popModalHeader.setAttribute('style' , popModualHeader)
+popModalHeaderCloseBtn.setAttribute('style' , popModualHeaderCloseBtn)
+popModalBody.setAttribute('style' , popModualBody)
 
 popBtnElement.innerHTML = 'Click me'
 
+popModalHeader.appendChild(popModalHeaderCloseBtn)
+
+popModalElement.appendChild(popModalHeader)
+popModalElement.appendChild(popModalBody)
 
 document.body.appendChild(popBtnElement);
 document.body.appendChild(popModalElement);
