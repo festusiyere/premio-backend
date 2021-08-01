@@ -34,6 +34,7 @@ var popBtn = `position:fixed;
           border-radius:10px`;
 
 var popModual = ` 
+            box-sizing: border-box;
             transition:all 0.3s ease-in-out;
              position : fixed;
              right:10px;
@@ -43,15 +44,15 @@ var popModual = `
              background:lightgreen;
              height:0;
              overflow:hidden;
+             padding:10px;
              `
 var popModualHeader = `
+                box-sizing: border-box;
                 height:40px;
                 width:100%;
-                border-bottm:1px solid white;
                 display:flex;
                 align-item:center;
                 justify-content:flex-end;
-                padding:10px;
                 font-weight:900;
                 `
 var popModualHeaderCloseBtn = `
@@ -63,7 +64,7 @@ var popModualHeaderCloseBtn = `
 var popModualBody = `
                 height:360px;
                 width:100%;
-                border-bottm:1px solid white;
+                border:1px solid white;
                 `
 var popBtnElement = document.createElement('div');
 var popModalElement = document.createElement('div');
