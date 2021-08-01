@@ -1,23 +1,23 @@
 @if(isset($popup))
+
 var main_text_top = "{{ $popup->main_text->top }}"
+var main_text_left = "{{ $popup->main_text->left }}"
+var main_text_content = "{{ $popup->main_text->content }}"
 
-var main_text_left = "{{ $popup['mainText']['left'] }}"
-var main_text_content = "{{ $popup['mainText']['content'] }}"
+var email_top = "{{ $popup->email->top }}"
+var email_left = "{{ $popup->email->left }}"
+var email_content = "{{ $popup->email->content }}"
 
-var email_top = "{{ $popup['email']['top'] }}"
-var email_left = "{{ $popup['email']['left'] }}"
-var email_content = "{{ $popup['email']['content'] }}"
+var button_top = "{{ $popup->button->top }}"
+var button_left = "{{ $popup->button->left }}"
+var button_content = "{{ $popup->button->content }}"
 
-var button_top = "{{ $popup['button']['top'] }}"
-var button_left = "{{ $popup['button']['left'] }}"
-var button_content = "{{ $popup['button']['content'] }}"
+var supporting_top = "{{ $popup->supporting_text->top }}"
+var supporting_text_left = "{{ $popup->supporting_text->left }}"
+var supporting_text_content = "{{ $popup->supporting_text->content }}"
 
-var supporting_top = "{{ $popup['supportingText']['top'] }}"
-var supporting_text_left = "{{ $popup['supportingText']['left'] }}"
-var supporting_text_content = "{{ $popup['supportingText']['content'] }}"
-
-var background_color = "{{ $popup['background-color'] }}"
-
+var background_color = "{{ $popup->background_color }}"
+var name = "{{ $popup->name }}"
 
 
 var popBtn = `position:fixed;
