@@ -15,11 +15,11 @@ class CreatePopupsTable extends Migration
     {
         Schema::create('popups', function (Blueprint $table) {
             $table->id();
-            $table->integer('stars');
-            $table->integer('main_text');
-            $table->integer('email');
-            $table->integer('button');
-            $table->integer('supporting_text');
+            $table->integer('stars_id');
+            $table->integer('main_text_id');
+            $table->integer('email_id');
+            $table->integer('button_id');
+            $table->integer('supporting_text_id');
             $table->string('background_color')->default('#ff7c54');
             $table->string('name')->default('Custom Name');
             $table->timestamps();

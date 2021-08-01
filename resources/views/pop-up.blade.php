@@ -1,25 +1,25 @@
-@if(!isset($popup))
-var main_text_top = "{{ $popup->main_text->top }}"
+@if(isset($popup))
 
-var main_text_left = "{{ $popup['mainText']['left'] }}"
-var main_text_content = "{{ $popup['mainText']['content'] }}"
+var main_text_top = "{{ isset($popup->main_text ) ? $popup->main_text->top : ''}}"
+var main_text_left = "{{ isset($popup->main_text) ? $popup->main_text->left : ''}}"
+var main_text_content = "{{ isset($popup->main_text )? $popup->main_text->content : '' }}"
 
-var email_top = "{{ $popup['email']['top'] }}"
-var email_left = "{{ $popup['email']['left'] }}"
-var email_content = "{{ $popup['email']['content'] }}"
+var email_top = "{{ isset($popup->email)? $popup->email->top : '' }}"
+var email_left = "{{ isset($popup->email)? $popup->email->left : '' }}"
+var email_content = "{{ isset($popup->email)? $popup->email->content : '' }}"
 
-var button_top = "{{ $popup['button']['top'] }}"
-var button_left = "{{ $popup['button']['left'] }}"
-var button_content = "{{ $popup['button']['content'] }}"
+var button_top = "{{ isset($popup->button) ? $popup->button->top : '' }}"
+var button_left = "{{ isset($popup->button)? $popup->button->left : '' }}"
+var button_content = "{{ isset($popup->button) ? $popup->button->content : '' }}"
 
-var supporting_top = "{{ $popup['supportingText']['top'] }}"
-var supporting_text_left = "{{ $popup['supportingText']['left'] }}"
-var supporting_text_content = "{{ $popup['supportingText']['content'] }}"
+var supporting_top = "{{ isset($popup->supporting_text)? $popup->supporting_text->top : '' }}"
+var supporting_text_left = "{{ isset($popup->supporting_text)? $popup->supporting_text->left : '' }}"
+var supporting_text_content = "{{ isset($popup->supporting_text)? $popup->supporting_text->content : '' }}"
 
-var background_color = "{{ $popup['background-color'] }}"
+var background_color = "{{ isset($popup->background_color)?$popup->background_color  : '' }}"
+var name = "{{ isset($popup->name)?$popup->name  : '' }}"
 
-
-
+console.log(main_text_top,main_text_left,main_text_content,email_top,button_top,button_left,button_content,supporting_top,supporting_text_left,supporting_text_content,name)
 var popBtn = `position:fixed;
           right:10px;
           bottom:20px;

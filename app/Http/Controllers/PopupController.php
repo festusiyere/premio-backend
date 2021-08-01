@@ -54,27 +54,20 @@ class PopupController extends Controller
         $popup = new Popup();
         $popup->name = $request_data['name'];
         $popup->background_color = $request_data['popup']['background-color'];
-        $popup->main_text = $main_text->id;
-        $popup->supporting_text = $supporting_text->id;
-        $popup->stars = $stars->id;
-        $popup->email = $email->id;
-        $popup->button = $button->id;
+        $popup->main_text_id = $main_text->id;
+        $popup->supporting_text_id = $supporting_text->id;
+        $popup->stars_id = $stars->id;
+        $popup->email_id = $email->id;
+        $popup->button_id = $button->id;
 
         $popup->save();
 
         return response()->json(['popup_id' => $popup->id]);
     }
 
-    public function show(Popup $popup)
+    public function show($popup)
     {
         $popup = Popup::find($popup);
-        // $popUpData['mainText'] =  $popData->main_text;
-        // $popUpData['email'] = $popData->email;
-        // $popUpData['button'] = $popData->button;
-        // $popUpData['supportingText'] = $popData->supporting_text;
-        // $popUpData['stars'] = $popData->stars;
-        // $popup['background-color'] =  $popData->background_color;
-
         return response()->view('pop-up', compact('popup'))
             ->header('Content-Type', 'application/javascript');
     }
