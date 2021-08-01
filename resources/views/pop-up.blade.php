@@ -42,6 +42,7 @@ var popModual = `
              width:300px;
              background:lightgreen;
              height:0;
+             overflow:hidden;
              `
 var popModualHeader = `
                 height:40px;
@@ -49,7 +50,8 @@ var popModualHeader = `
                 border-bottm:1px solid white;
                 display:flex;
                 align-item:center;
-                justify-content:flex-start;
+                justify-content:flex-end;
+                padding:10px;
                 font-weight:900;
                 `
 var popModualHeaderCloseBtn = `
