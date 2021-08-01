@@ -20,28 +20,25 @@ var background_color = "{{$popup['background-color']}}"
 
 
 
-var propBtn = {position:absolute;right:10px;bottom:20px;width:100px;height:50px;z-index:100;background:green}
+
 
 
 
 
 //add element to dom
 var elem = document.createElement('div');
-
-elem.setAttribute('style',propBtn);
-
+elem.classList.add('pop-up-botton');
 document.body.appendChild(elem);
-
 elem.addEventListener('click', function () {
     alert('pop')
 })
-console.log(main_text_top)
+console.log("main_text_top")
 
 
-{{-- //add style sheet
+//add style sheet
 var head = document.getElementsByTagName('HEAD')[0]; 
 var link = document.createElement('link');
 link.rel = 'stylesheet'; 
 link.type = 'text/css';
 link.href = '/asset/style.css'; 
-head.appendChild(link);  --}}
+head.appendChild(link); 
