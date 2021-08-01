@@ -1,18 +1,20 @@
-var main_text_top = "{{ $popUpData['mainText']['top'] }}"
-var main_text_left = "{{ $popUpData['mainText']['left'] }}"
-var main_text_content = "{{ $popUpData['mainText']['content'] }}"
+<script>
+    var main_text_top = "{{ $popup->main_text->top }}"
 
-var email_top = "{{ $popUpData['email']['top'] }}"
-var email_left = "{{ $popUpData['email']['left'] }}"
-var email_content = "{{ $popUpData['email']['content'] }}"
+var main_text_left = "{{ $popup['mainText']['left'] }}"
+var main_text_content = "{{ $popup['mainText']['content'] }}"
 
-var button_top = "{{ $popUpData['button']['top'] }}"
-var button_left = "{{ $popUpData['button']['left'] }}"
-var button_content = "{{ $popUpData['button']['content'] }}"
+var email_top = "{{ $popup['email']['top'] }}"
+var email_left = "{{ $popup['email']['left'] }}"
+var email_content = "{{ $popup['email']['content'] }}"
 
-var supporting_top = "{{ $popUpData['supportingText']['top'] }}"
-var supporting_text_left = "{{ $popUpData['supportingText']['left'] }}"
-var supporting_text_content = "{{ $popUpData['supportingText']['content'] }}"
+var button_top = "{{ $popup['button']['top'] }}"
+var button_left = "{{ $popup['button']['left'] }}"
+var button_content = "{{ $popup['button']['content'] }}"
+
+var supporting_top = "{{ $popup['supportingText']['top'] }}"
+var supporting_text_left = "{{ $popup['supportingText']['left'] }}"
+var supporting_text_content = "{{ $popup['supportingText']['content'] }}"
 
 var background_color = "{{ $popup['background-color'] }}"
 
@@ -33,13 +35,13 @@ var popBtn = `position:fixed;
           text-align:center;
           border-radius:10px`;
 
-var popModual = ` 
+var popModual = `
             box-sizing: border-box;
             transition:all 0.3s ease-in-out;
              position : fixed;
              right:10px;
              bottom:20px;
-             z-index:10; 
+             z-index:10;
              width:300px;
              background:lightgreen;
              height:0;
@@ -56,7 +58,7 @@ var popModualHeader = `
                 font-weight:900;
                 `
 var popModualHeaderCloseBtn = `
-                width:20px; 
+                width:20px;
                 height:20px;
                 background:red;
                 `

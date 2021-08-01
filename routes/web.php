@@ -18,4 +18,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/pop-up/{id}' ,[PopupController::class , 'show'] );
+// Creating a route to dynamically call the url
+Route::get('/pop-up/{id}', [PopupController::class , 'show'] );

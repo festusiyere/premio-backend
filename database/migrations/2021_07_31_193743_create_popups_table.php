@@ -20,8 +20,8 @@ class CreatePopupsTable extends Migration
             $table->integer('email');
             $table->integer('button');
             $table->integer('supporting_text');
-            $table->string('popup')->default('#ff7c54');
-            $table->string('name')->default('festus');
+            $table->string('background_color')->default('#ff7c54');
+            $table->string('name')->default('Custom Name');
             $table->timestamps();
         });
     }

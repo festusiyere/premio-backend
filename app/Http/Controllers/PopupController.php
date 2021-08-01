@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Email;
 use App\Popup;
+use App\Stars;
 use App\Button;
 use App\MainText;
 use App\SupportingText;
@@ -14,81 +15,68 @@ class PopupController extends Controller
 
     public function index()
     {
-
-    }
-
-    public function create()
-    {
-        //
+        return Popup::with(['email', 'button', 'main_text', 'stars', 'supporting_text'])->get();
     }
 
     public function store(Request $request)
     {
-        return $request;
-            $request_data = $request->all()->popupData;
-            $stars = new Stars;
-            $stars->top = $request_data['stars']['top'];
-            $stars->left = $request_data['stars']['left'];
-            $stars->save();
+        $request_data = $request->all();
 
-            $mainText  = new MainText;
-            $mainText->content = $request_data['mainText']['content'];
-            $mainText->content = $request_data['mainText']['top'];
-            $mainText->content = $request_data['mainText']['left'];
-            $mainText->save();
+        $stars = new Stars();
+        $stars->top = $request_data['stars']['top'];
+        $stars->left = $request_data['stars']['left'];
+        $stars->save();
 
-            $email  = new Email;
-            $email->content = $request_data['email']['content'];
-            $email->content = $request_data['email']['top'];
-            $email->content = $request_data['email']['left'];
-            $email->save();
+        $main_text  = new MainText();
+        $main_text->content = $request_data['mainText']['content'];
+        $main_text->top = $request_data['mainText']['top'];
+        $main_text->left = $request_data['mainText']['left'];
+        $main_text->save();
 
-            $button  = new Button;
-            $button->content = $request_data['button']['content'];
-            $button->content = $request_data['button']['top'];
-            $button->content = $request_data['button']['left'];
-            $button->save();
+        $email  = new Email();
+        $email->content = $request_data['email']['content'];
+        $email->top = $request_data['email']['top'];
+        $email->left = $request_data['email']['left'];
+        $email->save();
 
-            $supportingText  = new SupportingText;
-            $supportingText->content = $request_data['supportingText']['content'];
-            $supportingText->content = $request_data['supportingText']['top'];
-            $supportingText->content = $request_data['supportingText']['left'];
-            $supportingText->save();
+        $button  = new Button();
+        $button->content = $request_data['button']['content'];
+        $button->top = $request_data['button']['top'];
+        $button->left = $request_data['button']['left'];
+        $button->save();
 
-            return response()->json(['popup_id' => $popup_id]);
-      
+        $supporting_text  = new SupportingText;
+        $supporting_text->content = $request_data['supportingText']['content'];
+        $supporting_text->top = $request_data['supportingText']['top'];
+        $supporting_text->left = $request_data['supportingText']['left'];
+        $supporting_text->save();
+
+        $popup = new Popup();
+        $popup->name = $request_data['name'];
+        $popup->background_color = $request_data['popup']['background-color'];
+        $popup->main_text = $main_text->id;
+        $popup->supporting_text = $supporting_text->id;
+        $popup->stars = $stars->id;
+        $popup->email = $email->id;
+        $popup->button = $button->id;
+
+        $popup->save();
+
+        return response()->json(['popup_id' => $popup->id]);
     }
 
     public function show(Popup $popup)
     {
-        $popUpData['mainText'] = [
-            'top' => '40px',
-            'left' => '50px',
-            'content' => 'this is a test question'
-             ];
+        $popup = Popup::find($popup);
+        // $popUpData['mainText'] =  $popData->main_text;
+        // $popUpData['email'] = $popData->email;
+        // $popUpData['button'] = $popData->button;
+        // $popUpData['supportingText'] = $popData->supporting_text;
+        // $popUpData['stars'] = $popData->stars;
+        // $popup['background-color'] =  $popData->background_color;
 
-        $popUpData['email'] = [
-            'top' => '40px',
-            'left' => '50px',
-            'content' => 'this is a test question'
-            ];
-
-        $popUpData['button'] = [
-                'top' => '40px',
-                'left' => '50px',
-                'content' => 'this is a test question'
-            ];
-
-        $popUpData['supportingText'] = [
-                'top' => '40px',
-                'left' => '50px',
-                'content' => 'this is a test question'
-                    ];
-        
-        $popup['background-color'] = 'red';
-        return response()->view('pop-up' , compact('popUpData' ,'popup'))
-        ->header('Content-Type', 'application/javascript');
-
+        return response()->view('pop-up', compact('popup'))
+            ->header('Content-Type', 'application/javascript');
     }
 
     public function edit(Popup $popup)
