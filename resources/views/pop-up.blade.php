@@ -95,8 +95,10 @@ popModalElement.appendChild(popModalBody)
 
 document.body.appendChild(popBtnElement);
 document.body.appendChild(popModalElement);
-
+popModalHeaderCloseBtn.addEventListener('click', function () {
+    popModalElement.style.height = '0'
+})
 popBtnElement.addEventListener('click', function () {
-popModalElement.style.height = '400px'
+    popModalElement.style.height = '400px'
 })
 console.log('yesss');
