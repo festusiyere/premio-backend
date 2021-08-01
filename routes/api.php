@@ -20,5 +20,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::get('/popup', 'PopupController@index');
 Route::post('/popup', 'PopupController@store');
-Route::patch('/popup/update/{id}', 'PopupController@update');
-Route::delete('/popup/delete/{id}', 'PopupController@destroy');
+Route::patch('/popup/{id}', 'PopupController@update');
+Route::delete('/popup/{id}', 'PopupController@destroy');
