@@ -33,8 +33,7 @@ link.href = '/asset/style.css';
 
 // Append link element to HTML head
 
-
-
+head.appendChild(link); 
 
 
 
@@ -43,7 +42,7 @@ link.href = '/asset/style.css';
 
 
 var elem = document.createElement('div');
-elem.classList.addClass = 'pop-up-botton';
+elem.classList.add('pop-up-botton');
 document.body.appendChild(elem);
 elem.addEventListener('click', function () {
     alert('pop')
