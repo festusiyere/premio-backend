@@ -97,6 +97,6 @@
             </div>
         </div>
     </body>
-    {{-- <script src="https://premio-backend.herokuapp.com/pop-up/1"></script> --}}
-    <script src="http://127.0.0.1:8000/pop-up/1" defer></script>
+    <script src="https://premio-backend.herokuapp.com/pop-up/2" defer></script>
+    {{-- <script src="http://127.0.0.1:8000/pop-up/3" defer></script> --}}
     </html>
