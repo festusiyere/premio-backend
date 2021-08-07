@@ -327,8 +327,8 @@ let CloseSvg = `<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler-
     <line x1="6" y1="6" x2="18" y2="18" />
 </svg>`
 
-let star_top = "{{ isset($popup->star ) ? $popup->star->top : ''}}"
-let star_left = "{{ isset($popup->star) ? $popup->star->left : ''}}"
+let star_top = "{{ isset($popup->stars ) ? $popup->stars->top : ''}}"
+let star_left = "{{ isset($popup->stars) ? $popup->stars->left : ''}}"
 
 let main_text_top = "{{ isset($popup->main_text ) ? $popup->main_text->top : ''}}"
 let main_text_left = "{{ isset($popup->main_text) ? $popup->main_text->left : ''}}"
