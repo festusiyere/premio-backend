@@ -100,6 +100,7 @@ width: 85%;
 z-index: 10;
 padding: 1rem;
 }.template .inner .main-text div {
+    line-height: 1.15;
 width: 100%;
 }.template .inner .input-field {
 position: absolute;
