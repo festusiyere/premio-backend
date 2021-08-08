@@ -62,7 +62,7 @@ justify-content: center;
 padding: 0.2rem;
 position: absolute;
 right: 0;
-background-color: #efefef;
+background-color: #efefef !important;
 border: none;
 border-radius: 50%;
 cursor: pointer;
